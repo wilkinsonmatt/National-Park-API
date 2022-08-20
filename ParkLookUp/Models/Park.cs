@@ -1,4 +1,4 @@
-namespace CretaceousPark.Models
+namespace ParkLookUp.Models
 {
     public class Park
     {
