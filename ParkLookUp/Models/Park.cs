@@ -5,5 +5,6 @@ namespace ParkLookUp.Models
         public int ParkId { get; set; }
         public string Name { get; set; }
         public string State { get; set; }
+        public int YearFounded { get; set; }
     }
 }
