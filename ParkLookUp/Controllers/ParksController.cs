@@ -47,5 +47,40 @@ namespace ParkLookUp.Controllers
 
       return park;
     }
+
+    // PUT: api/Parks/5
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Put(int id, Park park)
+    {
+      if (id != park.ParkId)
+      {
+        return BadRequest();
+      }
+
+      _db.Entry(park).State = EntityState.Modified;
+
+      try
+      {
+        await _db.SaveChangesAsync();
+      }
+      catch (DbUpdateConcurrencyException)
+      {
+        if (!ParkExists(id))
+        {
+          return NotFound();
+        }
+        else
+        {
+          throw;
+        }
+      }
+
+      return NoContent();
+    }
+
+    private bool ParkExists(int id)
+    {
+      return _db.Parks.Any(e => e.ParkId == id);
+    }
   }
 }
