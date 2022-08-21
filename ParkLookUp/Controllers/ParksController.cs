@@ -33,5 +33,19 @@ namespace ParkLookUp.Controllers
 
       return CreatedAtAction("Post", new { id = park.ParkId }, park);
     }
+
+    // GET: api/Parks/5
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Park>> GetPark(int id)
+    {
+        var park = await _db.Parks.FindAsync(id);
+
+        if (park == null)
+        {
+            return NotFound();
+        }
+
+        return park;
+    }
   }
 }
