@@ -18,11 +18,28 @@ namespace ParkLookUp.Controllers
       _db = db;
     }
 
-    // GET api/parks
+    // GET: api/Parks
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Park>>> Get()
+    public async Task<ActionResult<IEnumerable<Park>>> Get(string name, string state, int yearFounded)
     {
-      return await _db.Parks.ToListAsync();
+      var query = _db.Parks.AsQueryable();
+
+      if (name != null)
+      {
+        query = query.Where(entry => entry.Name == name);
+      }
+
+      if (state != null)
+      {
+        query = query.Where(entry => entry.State  == state);
+      }
+
+      if (yearFounded > 0)
+      {
+        query = query.Where(entry => entry.YearFounded == yearFounded);
+      }
+
+      return await query.ToListAsync();
     }
 
     // POST api/parks
@@ -95,29 +112,7 @@ namespace ParkLookUp.Controllers
       return NoContent();
     }
 
-    // GET: api/Parks
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Park>>> Get(string name, string state, int yearFounded)
-    {
-      var query = _db.Parks.AsQueryable();
 
-      if (name != null)
-      {
-        query = query.Where(entry => entry.Name == name);
-      }
-
-      if (state != null)
-      {
-        query = query.Where(entry => entry.State  == state);
-      }
-
-      if (yearFounded > 0)
-      {
-        query = query.Where(entry => entry.YearFounded == yearFounded);
-      }
-
-      return await query.ToListAsync();
-    }
 
     private bool ParkExists(int id)
     {
