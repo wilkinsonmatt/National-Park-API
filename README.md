@@ -2,9 +2,9 @@
 
 #### By Matt Wilkinson
 
-![a picture of the page's header](img/6.jpg)
+![photo by Hendrik Cornelissen](img/6.jpg)
 
-#### An locally hosted API that has seed date for all 63 national parks. The API lists the name, state, and year it was founded. 
+#### A locally hosted API that has seed date for all 63 national parks. The API lists the name, state, and year it was founded. 
 
 ## Technologies Used
 
