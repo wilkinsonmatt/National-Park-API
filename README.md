@@ -4,7 +4,7 @@
 
 ![photo by Hendrik Cornelissen](img/6.jpg)
 
-#### A locally hosted API conating all 63 of the national parks in the United States. The API lists the name, state, and year it was founded. 
+#### A locally hosted API containing all 63 of the national parks in the United States. The API lists the name, state, and year it was founded. 
 
 ## Technologies Used
 
