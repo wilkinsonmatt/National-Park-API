@@ -3,7 +3,6 @@
 #### By Matt Wilkinson
 
 ![photo by Hendrik Cornelissen](img/6.jpg)
-_photo by Hendrik Cornelissen_
 
 #### A locally hosted API conating all 63 of the national parks in the United States. The API lists the name, state, and year it was founded. 
 
