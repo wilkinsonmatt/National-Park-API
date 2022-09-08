@@ -2,9 +2,9 @@
 
 #### By Matt Wilkinson
 
-![photo by Hendrik Cornelissen](img/6.jpg)
+#### A locally hosted API conating all 63 of the national parks in the United States. The API lists the name, state, and year it was founded. 
 
-#### A locally hosted API that has seed date for all 63 national parks. The API lists the name, state, and year it was founded. 
+![photo by Hendrik Cornelissen](img/6.jpg)
 
 ## Technologies Used
 
@@ -20,25 +20,24 @@
 
 ## Description 
 
-An API application that is locally hosted. Built with C#/.NET Core. Allows users to see interact will the database of the national parks. 
+This application hosts an API that contains info of all the national parks in the United States. Built with C#/.NET Core. It also allows users to interact with the database using the swagger user interface. 
 
 ## Setup & Installation Requirements
 
-* _Download/Clone entire github file>_
-* _Enter the new directory using the command ```cd Animal ParkLookUP```_
-* _In the root directory, confirm there is a .gitignore file_
-* _Add:_
+* Download/Clone entire github file
+* Enter the "ParkLooUp" directory using the command ```Cd ParkLookUp```
+* In the root directory, confirm there is a .gitignore file and add the following
 
 ```js
-*/obj,
+*/obj
 */bin
 *.vscode
 */appsettings.json
 ```
 
-* _To the .gitignore file. It will keep your repository clean of unnecessary files and protect your database from unauthorized access_
-* _Create an appsetting.json file at the root directory_
-* _Open the appsetting.json file and enter:_
+* To the .gitignore file. It will keep your repository clean of unnecessary files and protect your database from unauthorized access
+* Create an appsetting.json file at the root directory
+* Open the appsetting.json file and enter:
 
 ```js
 {
@@ -56,17 +55,16 @@ An API application that is locally hosted. Built with C#/.NET Core. Allows users
 }
 ```
 
-* _Run ```git add .gitignore```_
-* _Commit your changes_
-* _To ensure the project will run correctly,_
-* _Download MySQL WorkBench_
-* _Run ```dotnet tool install --global dotnet-ef --version 5.0.1``` at a global level_
-* _Run the following from the project directory of ```ParkLookUp```_
-* _Once all of the necessary setup is in place and we can successfully run dotnet build_
-* _Run ```dotnet restore``` and ```dotnet build```_
-* _Run ```dotnet ef migrations add Initial```_
-* _Run the following command: ```dotnet ef database update```_
-* _Run the following command: ```dotnet watch run```_
+* Run ```git add .gitignore```
+* Commit your changes
+* To ensure the project will run correctly download MySQL WorkBench
+* Run ```dotnet tool install --global dotnet-ef --version 5.0.1``` at a global level
+* Run the following from the project directory of ```ParkLookUp```
+* Once all of the necessary setup is in place and we can successfully run dotnet build
+* Run ```dotnet restore``` and ```dotnet build```
+* Run ```dotnet ef migrations add Initial```
+* Run the following command: ```dotnet ef database update```
+* Run the following command: ```dotnet watch run```
 * click on  <http://localhost:5000>
 
 
